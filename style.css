@@ -101,4 +101,9 @@ height: 65%;
   height: 80%;
 }
 }
+@media (orientation:Lasdscape) {
+  .Calculator{
+    height: 100%;
+  }
+}
 
