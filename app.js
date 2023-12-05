@@ -21,7 +21,10 @@ function appendbutton(val) {
 
     if (a == val && a=='.') return;
     if (a == '+' || a == '-' || a == 'x' || a == '÷') {
-        if (val == '+' || val == '-' || val == 'x' || val == '÷' || val == '%') { return; }
+        if (val == '+' || val == '-' || val == 'x' || val == '÷' || val == '%') { 
+            string=string.slice(0,-1)+val;
+            p.innerHTML = string;
+            return; }
     }
 
     //checking whether already the number having a decimal dot
