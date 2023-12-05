@@ -18,8 +18,8 @@ body{
   }
   @media (max-width: 767px) {
       .Calculator {
-        width: 70%;
-        height: 50%;
+        width: 80%;
+        height: 40%;
       }
     }
 /* For screens between 768px and 991px */
