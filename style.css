@@ -1,9 +1,14 @@
 body{
+  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    height: 100vb;  
+    height: 100vh;  
     background-color: #e1f6f4;
 }
 .Calculator {
@@ -16,29 +21,7 @@ body{
    border-radius: 10px;
    
   }
-  @media (max-width: 767px) {
-      .Calculator {
-        width: 90%;
-        height: 70%;
-      }
-    }
-/* For screens between 768px and 991px */
-@media (min-width: 768px) and (max-width: 991px) {
-  .Calculator {
-    width: 50%;
-    height: 70%;
-  }
-}
-
-  
-  /* For screens larger than 992px */
-  @media (min-width: 992px) {
-    .Calculator {
-      width: 40%;
-      /* height: 50%; */
-    }
-  }
-
+ 
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -56,9 +39,15 @@ button {
     font-weight: bold;
     border-radius: 8px;
     color: white;
+    transition: transform 0.1s ease;
 
 }
 
+
+button:active {
+  transform: scale(0.95);
+  background-color:rgb(30, 29, 29);
+}
 button:hover {
     background-color: #e0e0e0;
 }
@@ -82,5 +71,34 @@ p{
     overflow-wrap:break-word ;
     text-align:right;
     font-weight: 700;
+    overflow: hidden;
     font-size: 1.9rem;
 }
+@media (max-width: 767px) {
+  .Calculator {
+    width: 90%;
+    height: 65%;
+  }
+  
+      p{
+        font-size:1.2rem;
+        
+      }
+}
+/* For screens between 768px and 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+.Calculator {
+width: 50%;
+height: 65%;
+}
+}
+
+
+/* For screens larger than 992px */
+@media (min-width: 992px) {
+.Calculator {
+  width: 40%;
+  height: 80%;
+}
+}
+

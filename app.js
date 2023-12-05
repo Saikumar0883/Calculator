@@ -18,6 +18,12 @@ function appendbutton(val) {
     //checking whether the last enetered is an operator and present enetered also an operator
     if (string.length)
         a = string.charAt(string.length - 1);
+    else{
+        if(val=='x' || val =='÷' || val == '%')
+        {
+            return;
+        }
+    }
 
     if (a == val && a=='.') return;
     if (a == '+' || a == '-' || a == 'x' || a == '÷') {
