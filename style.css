@@ -47,9 +47,9 @@ button {
 }
 
 
-button:active {
+button.clicked {
   transform: scale(0.95);
-  background-color: #ccc;
+  background-color: #ccc; /* Background color when button is clicked */
 }
 
 button:hover {

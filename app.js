@@ -3,6 +3,10 @@ let p = document.querySelector('.calculations');
 let ismulordiv = false;
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
+        event.target.classList.add('clicked');
+        setTimeout(() => {
+            event.target.classList.remove('clicked');
+        }, 100);
         appendbutton(button.textContent);
     })
 })
@@ -25,7 +29,7 @@ function appendbutton(val) {
     }
 
     if (a == val && a == '.') return;
-    
+
     if (a == '+' || a == '-' || a == 'x' || a == '÷' || a == '%') {
         if (val == '+' || val == '-' || val == 'x' || val == '÷' || val == '%') {
             string = string.slice(0, -1) + val;
