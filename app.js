@@ -18,19 +18,20 @@ function appendbutton(val) {
     //checking whether the last enetered is an operator and present enetered also an operator
     if (string.length)
         a = string.charAt(string.length - 1);
-    else{
-        if(val=='x' || val =='÷' || val == '%')
-        {
+    else {
+        if (val == 'x' || val == '÷' || val == '%') {
             return;
         }
     }
 
-    if (a == val && a=='.') return;
-    if (a == '+' || a == '-' || a == 'x' || a == '÷') {
-        if (val == '+' || val == '-' || val == 'x' || val == '÷' || val == '%') { 
-            string=string.slice(0,-1)+val;
+    if (a == val && a == '.') return;
+    
+    if (a == '+' || a == '-' || a == 'x' || a == '÷' || a == '%') {
+        if (val == '+' || val == '-' || val == 'x' || val == '÷' || val == '%') {
+            string = string.slice(0, -1) + val;
             p.innerHTML = string;
-            return; }
+            return;
+        }
     }
 
     //checking whether already the number having a decimal dot
@@ -149,7 +150,7 @@ function eval(String) {
     }
 
     string = ans;
-    p.innerHTML +="\n<br> = ";
-    p.innerHTML +=ans;
+    p.innerHTML += "\n<br> = ";
+    p.innerHTML += ans;
 
 }
